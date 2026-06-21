@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+        }
+        body{
+            background:#f4f6f9;
+        }
+        nav{
+            background:#0d6efd;
+            padding:15px 50px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        nav .logo{
+            color:white;
+            font-size:24px;
+            font-weight:25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav ul li a:hover{
+            color:#ffd700;
+        }
+        .hero{
+            text-align:center;
+            padding:50px 20px;
+        }
+        .hero h1{
+            color:#0d6efd;
+            margin-bottom:10px;
+        }
+        .hero p{
+            color:#555;
+        }
+        .container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+            margin-top: -50px;
+        }
+        .form-card{
+            background:white;
+            width:500px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+            background-color: rgb(211 211 250);
+            border: 2px solid #0d6efd;
+        }
+        .form-card h2{
+            text-align:center;
+            color:#0d6efd;
+            margin-bottom:20px;
+        }
+        form p{
+            margin-bottom:15px;
+        }
+        form input,
+        form select,
+        form textarea{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            margin-top:5px;
+        }
+        button{
+            width:100%;
+            height: 45px;
+            padding:10px;
+            background:#0d6efd;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:25px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#084fc7;
+        }
+        footer{
+            margin-top:40px;
+            background:#212529;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+
+        @media(max-width:600px){
+            .form-card{
+                width:100%;
+            }
+
+            nav{
+                flex-direction:column;
+                gap:10px;
+            }
+        }
+    h1{
+        color: blue;
+    }
+    .form-card p {
+    margin-bottom: 15px;
+}
+.form-card label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+</style>
+<body>
+     <nav>
+        <div class="logo">Welcome To Our Site</div>
+        <ul>
+            <li><a href="/reg/">Home</a></li>
+            <li><a href="/reg/">Register</a></li>
+            <li><a href="/login/">Login</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- <h1>Register</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form> -->
+
+    <div class="hero">
+        <h1>Create Your Account</h1>
+        <p>Register to access all features of our website.</p>
+    </div>
+    <div class="container">
+        <div class="form-card">
+            <h2>Register</h2>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit">Register</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html> 
+
+
